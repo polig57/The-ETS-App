@@ -4,7 +4,7 @@ class Form extends Component {
 
   constructor(props) {
     super(props)
-  
+
     this.state = {
        name: '',
        rank: '',
@@ -18,7 +18,7 @@ class Form extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
-  
+
   handleNameChange(event) {
     this.setState({
       name: event.target.value
@@ -57,9 +57,9 @@ class Form extends Component {
           <div>
             <label>Name:</label>
             <input
-              type='text' 
+              type='text'
               value={name}
-              placeholder='First Last' 
+              placeholder='First Last'
               onChange={this.handleNameChange }
             />
           </div>
@@ -71,23 +71,27 @@ class Form extends Component {
               <option value='PV2'>PV2</option>
               <option value='PFC'>PFC</option>
               <option value='SPC'>SPC</option>
+              <option value='SPC'>SGT</option>
+              <option value='SPC'>SSG</option>
+              <option value='SPC'>SFC</option>
+              <option value='SPC'>MSG</option>
             </select>
           </div>
           <div>
             <label>ETS Date:</label>
-            <input 
-              type='text' 
+            <input
+              type='text'
               value={etsDate}
-              placeholder='DD/MM/YYY' 
+              placeholder='DD/MM/YYY'
               onChange={this.handleEtsChange }
             />
           </div>
           <div>
           <label>Transition Leave Date:</label>
-            <input 
-              type='text' 
+            <input
+              type='text'
               value={leaveDate}
-              placeholder='DD/MM/YYY' 
+              placeholder='DD/MM/YYY'
               onChange={this.handleLeaveChange }
             />
           </div>

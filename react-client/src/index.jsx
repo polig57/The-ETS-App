@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import List from './components/List.jsx';
-import Form from './components/Form.jsx';
+import Form from './components/Form/Form.jsx';
 
 class App extends React.Component {
   constructor(props) {
