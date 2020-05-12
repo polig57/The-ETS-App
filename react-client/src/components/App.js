@@ -12,14 +12,6 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    axios.get(`ec2-13-59-33-181.us-east-2.compute.amazonaws.com`)
-      .then(res => {
-        const dataFromServer = res.data;
-        this.setState({ dataFromServer });
-      });
-  }
-
   render() {
     return (
       <div>
