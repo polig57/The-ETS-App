@@ -6,11 +6,12 @@ class Form extends Component {
     super(props)
 
     this.state = {
-       name: '',
-       rank: '',
-       etsDate: '',
-       leaveDate: ''
+      name: '',
+      rank: '',
+      etsDate: '',
+      leaveDate: ''
     }
+    // these will all be replaced with the handleChange bind when reuseable function is made
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleRankChange = this.handleRankChange.bind(this);
     this.handleEtsChange = this.handleEtsChange.bind(this);
@@ -18,7 +19,7 @@ class Form extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
-
+  // these will all be replaced with a handleChange reuseable function
   handleNameChange(event) {
     this.setState({
       name: event.target.value
@@ -49,7 +50,7 @@ class Form extends Component {
 
   render() {
 
-    const {name, rank, etsDate, leaveDate} = this.state;
+    const { name, rank, etsDate, leaveDate } = this.state;
 
     return (
       <div className='App'>
@@ -60,13 +61,14 @@ class Form extends Component {
               type='text'
               value={name}
               placeholder='First Last'
-              onChange={this.handleNameChange }
+              onChange={this.handleNameChange}
             />
           </div>
           <div>
             <label>Rank:</label>
             <select value={rank} onChange={() => this.handleRankChange()}>
               <option value='Select'>Select..</option>
+              {/* this will be dynamically rendered from an array of all ranks */}
               <option value='PVT'>PVT</option>
               <option value='PV2'>PV2</option>
               <option value='PFC'>PFC</option>
@@ -83,16 +85,16 @@ class Form extends Component {
               type='text'
               value={etsDate}
               placeholder='DD/MM/YYY'
-              onChange={this.handleEtsChange }
+              onChange={this.handleEtsChange}
             />
           </div>
           <div>
-          <label>Transition Leave Date:</label>
+            <label>Transition Leave Date:</label>
             <input
               type='text'
               value={leaveDate}
               placeholder='DD/MM/YYY'
-              onChange={this.handleLeaveChange }
+              onChange={this.handleLeaveChange}
             />
           </div>
           <button type='submit'>Submit</button>
