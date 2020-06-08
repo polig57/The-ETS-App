@@ -9,7 +9,7 @@ module.exports = {
   mode: 'development',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(DIST_DIR)
   },
   module: {
     rules: [
@@ -24,14 +24,8 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', {
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1,
-            modules: true,
-          }
-        }],
+        test: /\.css$/i,
+        use: ['style-loader','css-loader']
       }
     ]
   }

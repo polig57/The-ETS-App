@@ -7,7 +7,7 @@ var app = express();
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password :'HAHANik!',
+  password :'INSERT PASSWORD',
   database : 'theETSapp'
 });
 
