@@ -1,22 +1,37 @@
-var path = require('path');
-var SRC_DIR = path.join(__dirname, '/react-client/src');
-var DIST_DIR = path.join(__dirname, '/react-client/dist');
+const path = require('path');
+const SRC_DIR = path.join(__dirname, '/react-client/src');
+const DIST_DIR = path.join(__dirname, '/react-client/dist');
+
+
 
 module.exports = {
-  entry: `${SRC_DIR}/index.js`,
+  entry: '/Users/poli.gonzalez/Desktop/the-ets-app/react-client/src/index.js',
+  mode: 'development',
   output: {
     filename: 'bundle.js',
-    path: DIST_DIR
+    path: path.resolve(__dirname, 'dist')
   },
-  module : {
-    loaders : [
+  module: {
+    rules: [
       {
-        test : /\.jsx?/,
-        include : SRC_DIR,
-        loader : 'babel-loader',
-        query: {
-          presets: ['react', 'es2015']
-       }
+        test: /\.m?(jsx|js)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['babel-preset-env', 'babel-preset-react']
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            modules: true,
+          }
+        }],
       }
     ]
   }

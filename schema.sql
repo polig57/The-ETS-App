@@ -1,10 +1,10 @@
-DROP DATABASE IF EXISTS test;
+DROP DATABASE IF EXISTS theETSapp;
 
-CREATE DATABASE test;
+CREATE DATABASE theETSapp;
 
-USE test;
+USE theETSapp;
 
-CREATE TABLE items (
+CREATE TABLE users (
   id int NOT NULL AUTO_INCREMENT,
   quantity integer NOT NULL,
   description varchar(50) NOT NULL,
