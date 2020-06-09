@@ -16,12 +16,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>
         <Form />
-        </div>
-        <div>
         <Timeline />
-        </div>
       </div>
     )
   }

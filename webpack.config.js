@@ -5,7 +5,7 @@ const DIST_DIR = path.join(__dirname, '/react-client/dist');
 
 
 module.exports = {
-  entry: '/Users/poli.gonzalez/Desktop/the-ets-app/react-client/src/index.js',
+  entry: './react-client/src/index.js',
   mode: 'development',
   output: {
     filename: 'bundle.js',
