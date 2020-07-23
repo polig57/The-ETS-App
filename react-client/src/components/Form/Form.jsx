@@ -25,9 +25,15 @@ class Form extends Component {
   };
 
   toggleButton() {
-    this.setState((currentState) => ({
-      textDisplay: currentState.textDisplay,
-    }));
+    let userInput = document.getElementById("text");
+    let displayInput = userInput.style.display;
+
+    if (displayInput == 'block') {
+      userInput.style.display='none';
+    } else {
+      userInput.style.display='block';
+    }
+    event.preventDefault();
   }
 
   handleInputChange(event) {
@@ -37,7 +43,6 @@ class Form extends Component {
       [event.target.etsDate]: event.target.value,
       [event.target.leaveDate]: event.target.value,
       [event.target.rank]: event.target.value,
-      [event.target.textDisplay]: state.textDisplay,
     })
   };
 
@@ -57,16 +62,17 @@ class Form extends Component {
           <label>
             Rank:
               <select
-                value={rank}
-                onChange={this.handleRankChange}>
-                  <option value='Select'>Select..</option>
-                  {/* this will be dynamically rendered from an array of all ranks */}
-                  <option value='PVT'>PVT</option>
-                  <option value='PV2'>PV2</option>
-                  <option value='PFC'>PFC</option>
-                  <option value='SPC'>SPC</option>
-              </select>
+              value={rank}
+              onChange={this.handleRankChange}>
+              <option value='Select'>Select..</option>
+              {/* this will be dynamically rendered from an array of all ranks */}
+              <option value='PVT'>PVT</option>
+              <option value='PV2'>PV2</option>
+              <option value='PFC'>PFC</option>
+              <option value='SPC'>SPC</option>
+            </select>
           </label>
+          <p></p>
           <label>
             First Name:
             <input
@@ -77,6 +83,7 @@ class Form extends Component {
               onChange={this.handleInputChange}
             />
           </label>
+          <p></p>
           <label>
             Last Name:
             <input
@@ -109,16 +116,15 @@ class Form extends Component {
               onChange={this.handleInputChange}
             />
           </label>
-          <p>
-            {!this.state.textDisplay && this.props.text}
-            <button onClick={() => this.toggleButton()}> Submit </button>
-          </p>
+        </form>
           <div id='info'>
             <p>
-              {rank} {lastName}, {firstName} your ETS Date is: {etsDate} and your Leave Date is: {leaveDate}
+              <button onClick={() => this.toggleButton()}> Submit </button>
+            </p>
+            <p id='text'>
+              {rank} {lastName}, {firstName} your ETS Date is: {etsDate} and your Leave Date is: {leaveDate}. Here's a look at your Transition timeline.
             </p>
           </div>
-        </form>
       </div>
     )
   }

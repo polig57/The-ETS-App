@@ -1,7 +1,7 @@
 const timelineData = [
   {
-    text: 'Make an appointement with a Fort Hood Transition Assistance Program (TAP) Counselor for your individualized initial counseling',
-    months: '18- 20 Months out',
+    text: 'Make an appointment with a Fort Hood Transition Assistance Program (TAP) Counselor for your individualized initial counseling',
+    months: '18-20 Months out',
     category: {
       tag: 'SFL-TAP',
       color: '#FFDB14'
@@ -13,8 +13,8 @@ const timelineData = [
   },
 
   {
-    text: 'Attend your initial counseling appointment and complete your personal self-assessment/Individual Transition Plan (ITP)',
-    months: '18- 20 Months out',
+    text: 'Attend your initial counseling appointment and complete your personal self-assessment & Individual Transition Plan (ITP)',
+    months: '18-20 Months out',
     category: {
       tag: 'SFL-TAP',
       color: '#FFDB14'
@@ -26,7 +26,7 @@ const timelineData = [
   },
 
   {
-    text: 'Explore SkillBridge or Career Skills opportunities. ',
+    text: 'Explore SkillBridge or Career Skills Program (CSP) opportunities',
     months: '12-18 Months out',
     category: {
       tag: 'Career',
@@ -40,7 +40,7 @@ const timelineData = [
 
   {
     text:
-      'Register for/attend TAP workshops and additional tracks (employment, vocational, entrepreneurship, higher education)',
+      'Register for & attend Transition Assistance Program (TAP) workshops and additional tracks (employment, vocational, entrepreneurship, higher education)',
     months: '12-18 Months out',
     category: {
       tag: 'SFL-TAP',
@@ -57,7 +57,7 @@ const timelineData = [
     months: '6-12 Months out',
     category: {
       tag: 'Health',
-      color: '#018f69'
+      color: 'red'
     },
     //   link: {
     //       url: 'https://[FILL IN IF FOUND RELEVANT INFO ONLINE]',
@@ -65,8 +65,8 @@ const timelineData = [
     //   }
   },
   {
-    text: 'Sign up for LinkedIn Premium, free for 12 months',
-    months: '6-12 Months out',
+    text: 'Sign up for LinkedIn Premium, 12 months free for Military and Veterans',
+    months: '6-8 Months out',
     category: {
       tag: 'Career',
       color: '#1DA1F2'
@@ -81,7 +81,7 @@ const timelineData = [
     months: '4-6 Months out',
     category: {
       tag: 'Health',
-      color: '#018f69'
+      color: 'red'
     },
     //   link: {
     //       url: 'https://[FILL IN IF FOUND RELEVANT INFO ONLINE]',
@@ -89,7 +89,7 @@ const timelineData = [
     //   }
   },
   {
-    text: 'Figure out if youre taking transiton leave or selling your leave',
+    text: 'Figure out if you are taking transiton leave or selling your accured leave',
     months: '4-6 Months out',
     category: {
       tag: 'Finance',
@@ -99,6 +99,46 @@ const timelineData = [
     //       url: 'https://[FILL IN IF FOUND RELEVANT INFO ONLINE]',
     //       text: 'Check it out here'
     //   }
+  },
+  {
+    text: 'Schedule and complete your Capstone event with your Commander or their designee',
+    months: '3 Months out',
+    category: {
+      tag: 'SFL-TAP',
+      color: '#FFDB14'
+    }
+  },
+  {
+    text: 'Review your Pre-Separation Checklist (DD-2648)',
+    months: '3 Months out',
+    category: {
+      tag: 'SFL-TAP',
+      color: '#FFDB14'
+    }
+  },
+  {
+    text: 'Contact your medical treatment facility to get copies of your health and dental records',
+    months: '3 Months out',
+    category: {
+      tag: 'Health',
+      color: 'red'
+    }
+  },
+  {
+    text: 'Set up a one-on-one session with a VA Benefits Advisor',
+    months: '3 Months out',
+    category: {
+      tag: 'VA',
+      color: 'black'
+    }
+  },
+  {
+    text: 'Prepare your transition leave packet with your unit',
+    months: '3-2 Months out',
+    category: {
+      tag: 'Unit',
+      color: 'blue'
+    }
   },
 ]
 export default timelineData;

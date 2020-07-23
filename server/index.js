@@ -7,18 +7,18 @@ var app = express();
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password :'INSERT PASSWORD',
+  password :'HAHANik!',
   database : 'theETSapp'
 });
 
-// connection.connect();
+connection.connect();
 
 // Listen to POST requests to /users.
 app.post('/users', function(req, res) {
   // Get sent data.
   var user = req.body;
   // Do a MySQL query.
-  var query = connection.query('INSERT INTO users SET ?', user, function(err, result) {
+  var query = connection.query('INSERT INTO theETSapp SET ?', user, function(err, result) {
 
   });
   res.end('Success');
