@@ -3,6 +3,7 @@ import axios from 'axios'
 import List from './List/List.jsx';
 import Form from './Form/Form.jsx';
 import Timeline from './Timeline/Timeline.jsx'
+import Home from './Home/Homepage.jsx'
 
 class App extends React.Component {
   constructor(props) {
