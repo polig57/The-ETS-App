@@ -6,7 +6,7 @@ const TimelineItem = ({ data }) => (
             <span className="tag" style={{ background: data.category.color }}>
                 {data.category.tag}
             </span>
-            <months className="months">{data.months}</months>
+            <div className="months">{data.months}</div>
             <p>{data.text}</p>
             {data.link && (
                 <a

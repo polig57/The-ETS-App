@@ -1,0 +1,5 @@
+const HomepageData = () => [
+  {
+    text:
+  }
+]

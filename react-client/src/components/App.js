@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import List from './List/List.jsx';
+import React, { Component } from 'react';
+import axios from 'axios';
 import Form from './Form/Form.jsx';
-import Timeline from './Timeline/Timeline.jsx'
-import Home from './Home/Homepage.jsx'
+import Timeline from './Timeline/Timeline.jsx';
+import Home from './Home/Homepage.jsx';
+// import List from './List/List.jsx';
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import Routes from '../Routing/Routes.jsx';
+import history from '../Routing/history.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,10 +19,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Form />
-        <Timeline />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path='/' component={Home} />
+          <Route path='/Form' component={Form} />
+          <Route path='/Timeline' component={Timeline} />
+        </div>
+      </BrowserRouter>
     )
   }
 }

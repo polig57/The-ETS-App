@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import history from '../../Routing/history.js';
 
 class Form extends Component {
   constructor() {
@@ -119,7 +126,9 @@ class Form extends Component {
         </form>
           <div id='info'>
             <p>
-              <button onClick={() => this.toggleButton()}> Submit </button>
+              <Link to='/Timeline'>
+                <button onClick={() => this.toggleButton()}> Submit </button>
+              </Link>
             </p>
             <p id='text'>
               {rank} {lastName}, {firstName} your ETS Date is: {etsDate} and your Leave Date is: {leaveDate}. Here's a look at your Transition timeline.
